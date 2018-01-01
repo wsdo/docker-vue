@@ -29,7 +29,7 @@ services:
        build: ./nginx
        restart: always
        ports:
-           - "8086:80"
+           - "8087:80"
        links:
            - app
        volumes_from:
