@@ -1,0 +1,6 @@
+FROM  daocloud.io/phpimage/lnmp-base:latest
+MAINTAINER devdocker <www.devdocker.com>
+
+ADD . /var/www/html
+
+
