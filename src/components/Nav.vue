@@ -8,7 +8,7 @@
             <el-col :span="6"><div class="grid-content bg-purple">
                       <el-menu-item index="1"><router-link to="/" tag="li">首页</router-link></el-menu-item>
               <!-- <el-menu-item index="3"><router-link to="/blog" tag="li">博客</router-link></el-menu-item> -->
-              <el-menu-item index="3">分析你的网站</el-menu-item>
+              <el-menu-item index="3">分析网站</el-menu-item>
       
               </div></el-col>
         </el-row>
