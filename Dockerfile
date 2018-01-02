@@ -1,11 +1,13 @@
-FROM daocloud.io/wshudong/docker-vue-cli:latest
+FROM node:9.0
 MAINTAINER shudong <shudong.wang>
 
-WORKDIR /var/www/html/
-COPY . /var/www/html/
-# 编译 /var/www/html/dist 目录
- RUN npm run build
+RUN mkdir -p /var/www/html
+WORKDIR /var/www/html
 
-VOLUME ["/var/www"]
+COPY package.json /var/www/html/
+# set taobao source package
+RUN npm config set registry https://registry.npm.taobao.org
+RUN npm install
+COPY . /var/www/html
 
-#CMD  ["npm","run build"]
+RUN npm run build
