@@ -5,12 +5,20 @@
 const path = require('path')
 
 module.exports = {
-  dev: {
-
+  dev:{
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/v1/**': {
+        target: 'http://api.webfenxi.com/',
+        changeOrigin: true,
+        // target: 'http://127.0.0.1:8085/',
+        // pathRewrite: {
+        //   '^/v1': '/'
+        // }
+      },
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
